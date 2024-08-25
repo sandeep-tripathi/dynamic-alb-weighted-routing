@@ -7,17 +7,17 @@
 ![image](https://github.com/user-attachments/assets/19a6e241-8064-437e-a3e6-f58f6c8dfbcd)
 
 
-# Create a Virtual Environment:
+## 1. Create a Virtual Environment:
 $ python -m venv venv
 
-# Activate in Windows:
+### Activate in Windows:
 $ venv\Scripts\activate
 # Activate in Linux/Mac: 
 $ source venv/bin/activate
 
 
 
-# Running the Project
+## 2. Running the Project
 
 # Windows
 Install Dependencies:
@@ -34,6 +34,6 @@ Run the Script:
 
 
 
-# Running test
+## 3. Running test
 # $ python -m unittest discover tests
 
