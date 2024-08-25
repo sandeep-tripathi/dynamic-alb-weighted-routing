@@ -8,11 +8,13 @@ Folder Structure:
 
 
 # Create a Virtual Environment:
-python -m venv venv
+$ python -m venv venv
 
-Activate in windows: venv\Scripts\activate
-Activate in Linux/mac: source venv/bin/activate
- 
+# Activate in windows: venv\Scripts\activate
+# Activate in Linux/mac: source venv/bin/activate
+
+
+############################################################# 
 If you are using statis credential   Ensure your .env file has the necessary AWS environment variables or configure using the AWS CLI.
 ###############################################################
 # Running the Project
