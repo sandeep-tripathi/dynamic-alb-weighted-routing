@@ -1,4 +1,6 @@
 import boto3
+import pandas as pd
+from datetime import datetime, timedelta
 from typing import Dict, Tuple
 
 def get_instance_utilization(instance_id: str, cloudwatch: boto3.client) -> Tuple[float, float]:
@@ -62,6 +64,43 @@ def update_target_group_weights(alb_arn: str, target_group_weights: Dict[str, fl
                 }
             ]
         )
+
+
+def display_iteration_table(iteration: int, utilization_data: Dict[str, Tuple[float, float]], weights: Dict[str, float]) -> None:
+    """
+    Display the utilization and weights for each EC2 instance in a table format.
+    """
+    table_data = []
+    for instance_id, (cpu, memory) in utilization_data.items():
+        combined_utilization = calculate_combined_utilization(cpu, memory)
+        weight = weights[instance_id]
+        table_data.append([instance_id, 80, cpu, memory, combined_utilization, weight])
+
+    df = pd.DataFrame(table_data, columns=[
+        "Instance ID", "Port", "CPU Utilization (%)", "Memory Utilization (%)", 
+        "Combined Utilization Factor", "Weight"
+    ])
+    df.sort_values(by="Weight", ascending=True, inplace=True)
+    
+    print(f"\nIteration {iteration}:")
+    print(df.to_string(index=False, justify='center'))
+
+    lowest_weight_instance = df.iloc[0]
+    highest_weight_instance = df.iloc[-1]
+    
+    print(f"\nLowest Weight: {lowest_weight_instance['Weight']} (Instance: {lowest_weight_instance['Instance ID']})")
+    print(f"Highest Weight: {highest_weight_instance['Weight']} (Instance: {highest_weight_instance['Instance ID']})")
+
+    print("\nRouting Information")
+    print("+---------------------+------+")
+    print("| Instance ID         | Port |")
+    print("+---------------------+------+")
+    for instance_id in df["Instance ID"]:
+        print(f"| {instance_id:<19} |  80  |")
+    print("+---------------------+------+")
+    
+    print("\nTarget group weights updated and traffic routed successfully.")
+
 
 def main() -> None:
     cloudwatch = boto3.client('cloudwatch')
