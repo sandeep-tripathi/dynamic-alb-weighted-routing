@@ -2,6 +2,8 @@
 Dynamic ALB Weighted Routing in AWS with combined EC2 Metrics and OIDC Authentication 
 
 Folder Structure:
+
+
 dynamic-alb-weighted-routing/
 │
 ├── aws_auth.py                  # Although common practice, static credentials are bad practice
