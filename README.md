@@ -6,35 +6,26 @@ Folder Structure:
 
 ![image](https://github.com/user-attachments/assets/19a6e241-8064-437e-a3e6-f58f6c8dfbcd)
 
-
-
-Running the Project
-Windows
+If you are using statis credential   Ensure your .env file has the necessary AWS environment variables or configure using the AWS CLI.
+###############################################################
+# Running the Project
+##############################################################
+# Windows
 Install Dependencies:
-
-bash
-Code kopieren
-pip install -r requirements.txt
-Set up AWS Credentials:
-#Ensure your .env file has the necessary AWS environment variables or configure using the AWS CLI.
-
+# $ pip install -r requirements.txt
 Run the Script:
+# $ python alb_weighted_routing.py
 
-bash
-Code kopieren
-python alb_weighted_routing.py
-Linux
+##########################################################
+# Linux
 Install Dependencies:
-
-bash
-Code kopieren
-pip install -r requirements.txt
-Set up AWS Credentials:
-#Ensure your .env file has the necessary AWS environment variables or configure using the AWS CLI.
-
+# pip install -r requirements.txt
 Run the Script:
+# $python3 alb_weighted_routing.py
 
-'''
-python3 alb_weighted_routing.py
-'''
+#############################################################
+
+
+# Running test
+# $ python -m unittest discover tests
 
