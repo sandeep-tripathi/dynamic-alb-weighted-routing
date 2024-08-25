@@ -1,4 +1,4 @@
-### Dynamic ALB Weighted Routing in AWS with combined EC2 Metrics and OIDC Authentication
+# Dynamic ALB Weighted Routing in AWS with combined EC2 Metrics and OIDC Authentication
 
 
 ### Folder Structure:
