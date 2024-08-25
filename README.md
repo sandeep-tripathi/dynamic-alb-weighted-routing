@@ -10,34 +10,28 @@
 # Create a Virtual Environment:
 $ python -m venv venv
 
-# Activate in windows:
+# Activate in Windows:
 $ venv\Scripts\activate
-# Activate in Linux/mac: 
+# Activate in Linux/Mac: 
 $ source venv/bin/activate
 
 
-############################################################# 
-If you are using statis credential   Ensure your .env file has the necessary AWS environment variables or configure using the AWS CLI.
-#############################################################
 
-
-###############################################################
 # Running the Project
-##############################################################
+
 # Windows
 Install Dependencies:
 # $ pip install -r requirements.txt
 Run the Script:
 # $ python alb_weighted_routing.py
 
-##########################################################
+
 # Linux
 Install Dependencies:
 # pip install -r requirements.txt
 Run the Script:
 # $python3 alb_weighted_routing.py
 
-#############################################################
 
 
 # Running test
