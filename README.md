@@ -12,21 +12,20 @@ $ python -m venv venv
 
 ### Activate in Windows:
 $ venv\Scripts\activate
-# Activate in Linux/Mac: 
+### Activate in Linux/Mac: 
 $ source venv/bin/activate
-
 
 
 ## 2. Running the Project
 
-# Windows
+### Windows
 Install Dependencies:
 # $ pip install -r requirements.txt
 Run the Script:
 # $ python alb_weighted_routing.py
 
 
-# Linux
+### Linux
 Install Dependencies:
 # pip install -r requirements.txt
 Run the Script:
