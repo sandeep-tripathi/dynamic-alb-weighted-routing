@@ -10,8 +10,10 @@
 # Create a Virtual Environment:
 $ python -m venv venv
 
-# Activate in windows: venv\Scripts\activate
-# Activate in Linux/mac: source venv/bin/activate
+# Activate in windows:
+$ venv\Scripts\activate
+# Activate in Linux/mac: 
+$ source venv/bin/activate
 
 
 ############################################################# 
