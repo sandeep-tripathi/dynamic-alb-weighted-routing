@@ -8,7 +8,9 @@
 
 
 ## 1. Create a Virtual Environment:
+```
 $ python -m venv venv
+```
 
 ### Activate in Windows:
 $ venv\Scripts\activate
