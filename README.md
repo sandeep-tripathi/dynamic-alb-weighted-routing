@@ -34,8 +34,7 @@ Set up AWS Credentials:
 
 Run the Script:
 
-bash
-Code kopieren
+'''
 python3 alb_weighted_routing.py
-
+'''
 
